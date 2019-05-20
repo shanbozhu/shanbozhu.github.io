@@ -56,10 +56,8 @@
   </h1>
   <time datetime="2019-05-20T19:14:49&#43;0800" class="post-date">2019-05-20 19:14:49</time>
   Ubuntu上怎样安装交叉编译器 Ubuntu上怎样安装交叉编译器呢？现说明如下：
- 将下载的交叉编译器复制到/opt目录
- 进入主目录，终端执行如下命令，编辑.bashrc文件：
-  vi .bashrc
- 在.bashrc文件末尾加上如下语句：  export PATH=$PATH:/opt/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin #让shell识别交叉编译器
+ 将下载的交叉编译器复制到/opt目录 进入主目录，终端执行如下命令，编辑.bashrc文件：  vi .bashrc
+ 在.bashrc文件末尾加上如下语句：  export PATH=$PATH:/opt/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin
  重启终端，至此交叉编译器安装完成。  64位Ubuntu上怎样编译出32位的可执行文件 在64位的ubuntu上编译程序时默认生成64位的可执行文件，但是怎样在64位的ubuntu上编译出32位的可执行文件呢？现说明如下：
  终端输入如下命令：  sudo apt-get install gcc-multilib g++-multilib
  用gcc编译时加上-m32选项
@@ -72,6 +70,7 @@
  至此安装完成。
   Ubuntu上怎样设置宽带连接 Ubuntu下设置宽带连接需要安装pppoe客户端，设置过程如下：
  安装pppoe客户端，终端执行：  sudo apt-get install pppoe pppoeconf pppstatus
+ 配置宽带连接，终端执行：  pppoeconf
   
   <div class="read-more-link">
     <a href="/ubuntu/">Read More…</a>

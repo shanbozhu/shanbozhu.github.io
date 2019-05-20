@@ -58,9 +58,8 @@
 <p>Ubuntu上怎样安装交叉编译器呢？现说明如下：</p>
 
 <ol>
-<li><p>将下载的交叉编译器复制到/opt目录</p></li>
-
-<li><p>进入主目录，终端执行如下命令，编辑.bashrc文件：</p></li>
+<li>将下载的交叉编译器复制到/opt目录</li>
+<li>进入主目录，终端执行如下命令，编辑.bashrc文件：</li>
 </ol>
 
 <p><code>vi .bashrc</code></p>
@@ -69,7 +68,7 @@
 <li>在.bashrc文件末尾加上如下语句：</li>
 </ol>
 
-<p><code>export PATH=$PATH:/opt/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin</code> #让shell识别交叉编译器</p>
+<p><code>export PATH=$PATH:/opt/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin</code></p>
 
 <ol>
 <li>重启终端，至此交叉编译器安装完成。</li>
@@ -86,7 +85,7 @@
 <p><code>sudo apt-get install gcc-multilib g++-multilib</code></p>
 
 <ol>
-<li><p>用gcc编译时加上-m32选项</p></li>
+<li><p>用gcc编译时加上<code>-m32</code>选项</p></li>
 
 <li><p>至此编译的可执行文件为32位。</p></li>
 </ol>
@@ -141,7 +140,7 @@
 
 <h2 id="ubuntu上怎样使删除的文件进入回收站">Ubuntu上怎样使删除的文件进入回收站</h2>
 
-<p>Ubuntu下的rm -r命令删除文件不会进入回收站，因此被误删的文件是不可恢复的，我们可以通过添加dl命令使删除的文件进入回收站，现说明如下：</p>
+<p>Ubuntu下的<code>rm -r</code>命令删除文件不会进入回收站，因此被误删的文件是不可恢复的，我们可以通过添加dl命令使删除的文件进入回收站，现说明如下：</p>
 
 <ol>
 <li><p>终端输入：<code>cd</code></p></li>
@@ -288,18 +287,6 @@
 </ol>
 
 <p><code>注：优盘启动盘实质是将WinPE写入优盘或者利用UltraISO将系统镜像写入优盘。</code></p>
-
-<h3 id="三-硬盘安装-此种方法适合系统可以启动的情况">三、硬盘安装 此种方法适合系统可以启动的情况</h3>
-
-<ol>
-<li><p>进入当前操作系统。</p></li>
-
-<li><p>将要安装的新系统复制到当前操作系统。</p></li>
-
-<li><p>双击Setup按提示安装新系统。</p></li>
-</ol>
-
-<p><code>注：硬盘安装不会出现驱动器高级选项，所以无法格式化原有分区。若要格式化原有分区必须使用硬盘安装器。</code></p>
 
 <p><strong>怎样设置第一启动项？</strong></p>
 
