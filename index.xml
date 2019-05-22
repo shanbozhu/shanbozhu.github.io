@@ -6,10 +6,20 @@
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 May 2019 19:33:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 11:28:09 +0800</lastBuildDate>
     
 	<atom:link href="https://shanbozhu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac命令行配置</title>
+      <link>https://shanbozhu.github.io/post/mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 22 May 2019 11:28:09 +0800</pubDate>
+      
+      <guid>https://shanbozhu.github.io/post/mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%85%8D%E7%BD%AE/</guid>
+      <description> 命令补全   在主目录（~）下，新建名为.inputrc的隐藏文件，输入如下内容
+ # 支持模糊搜索和不区分大小写 set show-all-if-ambiguous on set completion-ignore-case on TAB: menu-complete  </description>
+    </item>
     
     <item>
       <title>Git常用命令</title>
