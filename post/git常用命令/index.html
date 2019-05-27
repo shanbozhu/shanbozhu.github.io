@@ -51,7 +51,9 @@
     <div class="post">
   <h1>Git常用命令</h1>
   <time datetime=2019-05-21T19:33:39&#43;0800 class="post-date">Tue, May 21, 2019</time>
-  <p><strong>一、常用命令</strong></p>
+  
+
+<h4 id="一-常用命令">一、常用命令</h4>
 
 <blockquote>
 <p>表格从上往下依次执行</p>
@@ -99,7 +101,7 @@
 </tbody>
 </table>
 
-<p><strong>二、其他命令</strong></p>
+<h4 id="二-其他命令">二、其他命令</h4>
 
 <table>
 <thead>
@@ -172,6 +174,31 @@
 </tr>
 </tbody>
 </table>
+
+<h4 id="三-使用场景">三、使用场景</h4>
+
+<ol>
+<li><p>变基其他分支到当前分支</p>
+
+<pre><code>git rebase test
+git status
+解决冲突
+git add -u
+git rebase --continue
+</code></pre></li>
+
+<li><p>变基最后三次提交为一次提交</p></li>
+</ol>
+
+<blockquote>
+<p>b041ff5a643b7b1f5c590dc1a368f956ccc3df94 为倒数第四次提交的commit id</p>
+</blockquote>
+
+<pre><code>git log
+git rebase -i b041ff5a643b7b1f5c590dc1a368f956ccc3df94
+修改第二、三次提交的pick为squash，保存退出
+删除第二、三次提交的提交信息，保存退出
+</code></pre>
 
 </div>
 
