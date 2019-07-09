@@ -58,16 +58,16 @@
   一.Universal Links是干什么的 通用链接是Apple在iOS 9引入的一个新功能，是通过传统HTTP链接来启动App的技术。可以使用相同的网址打开网站和App。通过唯一的网址，就可以链接到App中具体的页面，如果用户没有安装App则链接到对应的普通网页。
 二.Universal Links怎么实现 主要有如下三步:
  苹果开发者中心配置  登录开发者账号，在Identifiers→AppIDs找到自己的App ID，打开Associated Domains服务。
- 服务端配置  1).新建名为apple-app-site-association的json文件，不能加.json后缀。
-2).编辑该文件，内容格式如下，注意不能更改其格式和字段名称。
+ 服务端配置  1). 新建名为apple-app-site-association的json文件，不能加.json后缀。
+2). 编辑该文件，内容格式如下，注意不能更改其格式和字段名称。
 { &quot;applinks&quot;: { &quot;apps&quot;: [], &quot;details&quot;: [ { &quot;appID&quot;: &quot;FFJNMLHK32.cn.damai.iphone&quot;, &quot;paths&quot;: [&quot;*&quot;] } ] } }  appID：由前缀和ID两部分组成，可以在开发者中心中的Identifiers→AppIDs中点击对应的App ID查看
 paths：对应域名中的路径，用于过滤可以跳转到App的特定链接
-3).把配置好的apple-app-site-association文件上传到服务器该域名的根目录下。
-4).点击https://damai.cn/apple-app-site-association验证apple-app-site-association文件是否上传成功
- xcode配置  1).要用Apple Developer Program members的账号登陆Xcode，个人账号或未登录则看不到Associated Domains选项
-2).找到工程的Capabilities -&gt; Associated Domains，打开此功能，在Domains中添加支持跳转的域名，域名的格式为applinks:www.damai.cn
-3).在AppDelegate中实现方法，在该方法内可以实现跳转到具体页面操作
-- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler { NSURL *url = userActivity.webpageURL; NSLog(@&quot;url.absoluteString = %@&quot;, url.
+3). 把配置好的apple-app-site-association文件上传到服务器该域名的根目录下。
+4). 点击https://damai.cn/apple-app-site-association验证apple-app-site-association文件是否上传成功
+ xcode配置  1). 要用Apple Developer Program members的账号登陆Xcode，个人账号或未登录则看不到Associated Domains选项
+2). 找到工程的Capabilities -&gt; Associated Domains，打开此功能，在Domains中添加支持跳转的域名，域名的格式为applinks:www.damai.cn
+3). 在AppDelegate中实现方法，在该方法内可以实现跳转到具体页面的操作
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler { NSURL *url = userActivity.
   
   <div class="read-more-link">
     <a href="/post/universal-links%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/">Read More…</a>
