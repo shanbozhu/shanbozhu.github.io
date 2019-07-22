@@ -200,6 +200,19 @@ git rebase -i b041ff5a643b7b1f5c590dc1a368f956ccc3df94
 删除第二、三次提交的提交信息，保存退出
 </code></pre>
 
+<h4 id="三-版本管理">三、版本管理</h4>
+
+<p>开发各个阶段会在不同的分支进行，一般如下：</p>
+
+<p><code>mission/dev/2.2.0</code> -&gt; <code>mission/master</code>（合并分支）-&gt; <code>mission/release/2.2.0</code>（新建分支）-&gt; <code>mission/dev/2.3.0</code></p>
+
+<p>具体操作如下：</p>
+
+<pre><code>mgit checkout mission/master
+mgit merge mission/dev/2.2.0 --no-ff -m &quot;【Merge】【2.2.0】【mission/dev/2.2.0】2.2.0合并至master&quot;
+mgit push origin HEAD:refs/for/mission/master
+</code></pre>
+
 </div>
 
 
