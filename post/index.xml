@@ -6,10 +6,29 @@
     <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Jul 2019 15:21:53 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 16:36:45 +0800</lastBuildDate>
     
 	<atom:link href="https://shanbozhu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>大公司特点总结</title>
+      <link>https://shanbozhu.github.io/post/%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%89%B9%E7%82%B9%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 13 Aug 2019 16:36:45 +0800</pubDate>
+      
+      <guid>https://shanbozhu.github.io/post/%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%89%B9%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
+      <description>待过阿里和百度后，能够感受到大公司的工作特点，特别是员工在公司中的位置。 当我们进入一家互联网公司后，公司再大，我们最终肯定要待在某个部门，这个部门负责某块固定的业务，这个业务肯定又有对应的产品，对于普通开发者来说，就是全力支持完善这款产品。 这就要看这款产品是否成熟，若是产品成熟，功能基本都很完善了，每次迭代需求不可能有大的改动，那么我们平时做些什么呢？
+互联网业务落地到具体产品的岗位和指标：
+   岗位 职责 核心指标     PM（产品） 需求 日活，月活，收益   UI（交互） 交互稿（.pdf）    UE（视觉） 视觉稿（.sketch）
+切图（.png）    RD（开发） 开发新需求（业务需求）
+维护旧需求（技术需求） 启动时间（短）
+卡顿率（低）
+崩溃率（低）
+页面打开时间（短）
+存储空间占用（小）
+安装包体积（小）
+内存占用(小)   QA（测试） 测试功能    OP（运营）  日活    </description>
+    </item>
     
     <item>
       <title>Universal Links功能的实现</title>
