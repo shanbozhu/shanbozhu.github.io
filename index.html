@@ -52,6 +52,27 @@
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
+    <a href="https://shanbozhu.github.io/post/markdown%E5%B8%B8%E7%94%A8%E5%9B%BE%E8%A1%A8%E8%AF%AD%E6%B3%95/">Markdown常用图表语法</a>
+  </h1>
+  <time datetime="2019-11-15T16:30:33&#43;0800" class="post-date">Fri, Nov 15, 2019</time>
+  一、表格
+   项目 价格 数量     计算机 \$1600 5   手机 \$12 12   管线 \$1 234      列一 列二 列三   合并行 列三   列一 列二 列三   合并列 行二列二 列三   行三列二 列三   二、流程图
+st=&gt;start: Start:&gt;https://www.zybuluo.com io=&gt;inputoutput: verification op=&gt;operation: Your Operation cond=&gt;condition: Yes or No? sub=&gt;subroutine: Your Subroutine e=&gt;end st-&gt;io-&gt;op-&gt;cond cond(yes)-&gt;e cond(no)-&gt;sub-&gt;io  三、时序图
+  
+  <div class="read-more-link">
+    <a href="/post/markdown%E5%B8%B8%E7%94%A8%E5%9B%BE%E8%A1%A8%E8%AF%AD%E6%B3%95/">Read More…</a>
+  </div>
+  
+</article><article class="post">
+  <h1 class="post-title">
+    <a href="https://shanbozhu.github.io/post/%E8%8B%B9%E6%9E%9C%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7%E7%B1%BB%E5%9E%8B/">苹果开发者账号类型</a>
+  </h1>
+  <time datetime="2019-11-14T14:38:31&#43;0800" class="post-date">Thu, Nov 14, 2019</time>
+  账号类型 签名证书 描述文件 版本 推送证书 Bundle ID 支持安装设备数量   公司开发者账号（$99、申请条件：邓白氏编码）、个人开发者账号（$99、申请条件：无限制） 开发证书（.p12） 开发描述文件（.mobileprovision） 测试包 开发推送证书（.p12） com.baidu.BaiduMobileInfo 100   发布证书（.p12） 发布描述文件（.mobileprovision） 商店包 生产推送证书（.p12） 无限制（需Apple审核）   企业开发者账号（$299、申请条件：邓白氏编码） 开发证书（.p12） 开发描述文件（.mobileprovision） 测试包 开发推送证书（.p12） com.baidu.BaiduMobileInfoEnterprise 100   发布证书（.p12） 发布描述文件（.mobileprovision） 企业包 生产推送证书（.p12） 无限制（无需Apple审核）   签名证书：xcode使用；推送证书：后端使用。
+描述文件：xcode使用，包含签名证书、Bundle Id、设备UDID。
+  
+</article><article class="post">
+  <h1 class="post-title">
     <a href="https://shanbozhu.github.io/post/%E5%A4%A7%E5%85%AC%E5%8F%B8%E7%89%B9%E7%82%B9%E6%80%BB%E7%BB%93/">大公司特点总结</a>
   </h1>
   <time datetime="2019-08-13T16:36:45&#43;0800" class="post-date">Tue, Aug 13, 2019</time>
@@ -59,14 +80,14 @@
 互联网业务落地到具体产品的岗位和指标：
    岗位 职责 核心指标     PM（产品） 需求
 产品文档（.rp、.html） 日活，月活，收益   UI（交互） 交互稿（.pdf）    UE（视觉） 视觉稿（.sketch、.html）
-切图（.png）    RD（开发） 开发新需求（业务需求）
+切图（.png）    CRD（客户端开发） 开发新需求（业务需求）
 维护旧需求（技术需求） 启动时间（短）
 卡顿率（低）
 崩溃率（低）
 页面打开时间（短）
 存储空间占用（小）
 安装包体积（小）
-内存占用（小）   QA（测试） 测试功能    OP（运营）  日活    
+内存占用（小）   FE（前端开发）     SRD（服务端开发）     QA（测试） 测试功能    OP（运营）  日活    
   
 </article><article class="post">
   <h1 class="post-title">
@@ -130,7 +151,14 @@ paths：对应域名中的路径，用于过滤可以跳转到App的特定链接
     <a href="https://shanbozhu.github.io/post/test/">Test</a>
   </h1>
   <time datetime="2019-05-22T20:11:49&#43;0800" class="post-date">Wed, May 22, 2019</time>
+  start=&gt;start: 开始 input=&gt;inputoutput: 输入 operation=&gt;operation: 操作 condition=&gt;condition: 操作出错？ output=&gt;inputoutput: 输出 error=&gt;operation: 请重新输入 end=&gt;end: 结束
+start-&gt;input input-&gt;operation operation-&gt;condition condition(no,bottom)-&gt;output condition(yes)-&gt;error(top)-&gt;input output-&gt;end
+title : 这个是标题 Alice -&gt; Bob: Hello,how are you? Note right of Bob:Bob thinks Bob &ndash;&gt; Alice: Thinks
+Title: Here is a title A-&gt;B: Normal line B--&gt;C: Dashed line C-&gt;&gt;D: Open arrow D--&gt;&gt;A: Dashed open arrow  { &quot;type&quot;: &quot;radar&quot;, &quot;data&quot;: { &quot;labels&quot;: [ &quot;Eating&quot;, &quot;Drinking&quot;, &quot;Sleeping&quot;, &quot;Designing&quot;, &quot;Coding&quot;, &quot;Cycling&quot;, &quot;Running&quot; ], &quot;datasets&quot;: [ { &quot;label&quot;: &quot;My First dataset&quot;, &quot;backgroundColor&quot;: &quot;rgba(179,181,198,0.
   
+  <div class="read-more-link">
+    <a href="/post/test/">Read More…</a>
+  </div>
   
 </article><article class="post">
   <h1 class="post-title">

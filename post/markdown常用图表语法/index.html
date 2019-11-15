@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.55.5" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Markdown常用图表语法 &middot; Blog</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://shanbozhu.github.io/"><h1>Blog</h1></a>
+      <p class="lead">
+         
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://shanbozhu.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2019</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Markdown常用图表语法</h1>
+  <time datetime=2019-11-15T16:30:33&#43;0800 class="post-date">Fri, Nov 15, 2019</time>
+  <p>一、表格</p>
+
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th align="right">价格</th>
+<th align="center">数量</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>计算机</td>
+<td align="right">\$1600</td>
+<td align="center">5</td>
+</tr>
+
+<tr>
+<td>手机</td>
+<td align="right">\$12</td>
+<td align="center">12</td>
+</tr>
+
+<tr>
+<td>管线</td>
+<td align="right">\$1</td>
+<td align="center">234</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+    <tr>
+        <td>列一</td> 
+        <td>列二</td>
+        <td>列三</td> 
+   </tr>
+   <tr>
+        <td colspan="2">合并行</td>
+        <td>列三</td>    
+   </tr>
+   <tr>
+        <td>列一</td> 
+        <td>列二</td>
+        <td>列三</td> 
+   </tr>
+    <tr>
+        <td rowspan="2">合并列</td>    
+        <td >行二列二</td>
+        <td>列三</td>  
+    </tr>
+    <tr>
+        <td >行三列二</td>
+        <td>列三</td>  
+    </tr>
+</table>
+
+<p>二、流程图</p>
+
+<pre><code class="language-flow">st=&gt;start: Start:&gt;https://www.zybuluo.com
+io=&gt;inputoutput: verification
+op=&gt;operation: Your Operation
+cond=&gt;condition: Yes or No?
+sub=&gt;subroutine: Your Subroutine
+e=&gt;end
+
+st-&gt;io-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;sub-&gt;io
+</code></pre>
+
+<p>三、时序图</p>
+
+<pre><code class="language-seq">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+</code></pre>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

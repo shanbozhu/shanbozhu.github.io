@@ -53,6 +53,89 @@
   <time datetime=2019-05-22T20:11:49&#43;0800 class="post-date">Wed, May 22, 2019</time>
   <p><img src="https://github.com/shanbozhu/github.io.resource/blob/master/image/Snip20180913_21.png?raw=true" alt="显示图片" /></p>
 
+<p>start=&gt;start: 开始
+input=&gt;inputoutput: 输入
+operation=&gt;operation: 操作
+condition=&gt;condition: 操作出错？
+output=&gt;inputoutput: 输出
+error=&gt;operation: 请重新输入
+end=&gt;end: 结束</p>
+
+<p>start-&gt;input
+input-&gt;operation
+operation-&gt;condition
+condition(no,bottom)-&gt;output
+condition(yes)-&gt;error(top)-&gt;input
+output-&gt;end</p>
+
+<p>title : 这个是标题
+Alice -&gt; Bob: Hello,how are you?
+Note right of Bob:Bob thinks
+Bob &ndash;&gt; Alice: Thinks</p>
+
+<pre><code class="language-seq">Title: Here is a title
+A-&gt;B: Normal line
+B--&gt;C: Dashed line
+C-&gt;&gt;D: Open arrow
+D--&gt;&gt;A: Dashed open arrow
+</code></pre>
+
+<pre><code class="language-seq">
+{
+  &quot;type&quot;: &quot;radar&quot;,
+  &quot;data&quot;: {
+    &quot;labels&quot;: [
+      &quot;Eating&quot;,
+      &quot;Drinking&quot;,
+      &quot;Sleeping&quot;,
+      &quot;Designing&quot;,
+      &quot;Coding&quot;,
+      &quot;Cycling&quot;,
+      &quot;Running&quot;
+    ],
+    &quot;datasets&quot;: [
+      {
+        &quot;label&quot;: &quot;My First dataset&quot;,
+        &quot;backgroundColor&quot;: &quot;rgba(179,181,198,0.2)&quot;,
+        &quot;borderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
+        &quot;pointBackgroundColor&quot;: &quot;rgba(179,181,198,1)&quot;,
+        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
+        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
+        &quot;pointHoverBorderColor&quot;: &quot;rgba(179,181,198,1)&quot;,
+        &quot;data&quot;: [
+          65,
+          59,
+          90,
+          81,
+          56,
+          55,
+          40
+        ]
+      },
+      {
+        &quot;label&quot;: &quot;My Second dataset&quot;,
+        &quot;backgroundColor&quot;: &quot;rgba(255,99,132,0.2)&quot;,
+        &quot;borderColor&quot;: &quot;rgba(255,99,132,1)&quot;,
+        &quot;pointBackgroundColor&quot;: &quot;rgba(255,99,132,1)&quot;,
+        &quot;pointBorderColor&quot;: &quot;#fff&quot;,
+        &quot;pointHoverBackgroundColor&quot;: &quot;#fff&quot;,
+        &quot;pointHoverBorderColor&quot;:· &quot;rgba(255,99,132,1)&quot;,
+        &quot;data&quot;: [
+          28,
+          48,
+          40,
+          19,
+          96,
+          27,
+          100
+        ]
+      }
+    ]
+  },
+  &quot;options&quot;: {}
+}
+</code></pre>
+
 </div>
 
 

@@ -6,10 +6,31 @@
     <description>Recent content on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Aug 2019 16:36:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 15 Nov 2019 16:30:33 +0800</lastBuildDate>
     
 	<atom:link href="https://shanbozhu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Markdown常用图表语法</title>
+      <link>https://shanbozhu.github.io/post/markdown%E5%B8%B8%E7%94%A8%E5%9B%BE%E8%A1%A8%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Fri, 15 Nov 2019 16:30:33 +0800</pubDate>
+      
+      <guid>https://shanbozhu.github.io/post/markdown%E5%B8%B8%E7%94%A8%E5%9B%BE%E8%A1%A8%E8%AF%AD%E6%B3%95/</guid>
+      <description>一、表格
+   项目 价格 数量     计算机 \$1600 5   手机 \$12 12   管线 \$1 234      列一 列二 列三   合并行 列三   列一 列二 列三   合并列 行二列二 列三   行三列二 列三   二、流程图
+st=&amp;gt;start: Start:&amp;gt;https://www.zybuluo.com io=&amp;gt;inputoutput: verification op=&amp;gt;operation: Your Operation cond=&amp;gt;condition: Yes or No? sub=&amp;gt;subroutine: Your Subroutine e=&amp;gt;end st-&amp;gt;io-&amp;gt;op-&amp;gt;cond cond(yes)-&amp;gt;e cond(no)-&amp;gt;sub-&amp;gt;io  三、时序图</description>
+    </item>
+    
+    <item>
+      <title>苹果开发者账号类型</title>
+      <link>https://shanbozhu.github.io/post/%E8%8B%B9%E6%9E%9C%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 14 Nov 2019 14:38:31 +0800</pubDate>
+      
+      <guid>https://shanbozhu.github.io/post/%E8%8B%B9%E6%9E%9C%E5%BC%80%E5%8F%91%E8%80%85%E8%B4%A6%E5%8F%B7%E7%B1%BB%E5%9E%8B/</guid>
+      <description>账号类型 签名证书 描述文件 版本 推送证书 Bundle ID 支持安装设备数量   公司开发者账号（$99、申请条件：邓白氏编码）、个人开发者账号（$99、申请条件：无限制） 开发证书（.p12） 开发描述文件（.mobileprovision） 测试包 开发推送证书（.p12） com.baidu.BaiduMobileInfo 100   发布证书（.p12） 发布描述文件（.mobileprovision） 商店包 生产推送证书（.p12） 无限制（需Apple审核）   企业开发者账号（$299、申请条件：邓白氏编码） 开发证书（.p12） 开发描述文件（.mobileprovision） 测试包 开发推送证书（.p12） com.baidu.BaiduMobileInfoEnterprise 100   发布证书（.p12） 发布描述文件（.mobileprovision） 企业包 生产推送证书（.p12） 无限制（无需Apple审核）   签名证书：xcode使用；推送证书：后端使用。
+描述文件：xcode使用，包含签名证书、Bundle Id、设备UDID。</description>
+    </item>
     
     <item>
       <title>大公司特点总结</title>
@@ -21,14 +42,14 @@
 互联网业务落地到具体产品的岗位和指标：
    岗位 职责 核心指标     PM（产品） 需求
 产品文档（.rp、.html） 日活，月活，收益   UI（交互） 交互稿（.pdf）    UE（视觉） 视觉稿（.sketch、.html）
-切图（.png）    RD（开发） 开发新需求（业务需求）
+切图（.png）    CRD（客户端开发） 开发新需求（业务需求）
 维护旧需求（技术需求） 启动时间（短）
 卡顿率（低）
 崩溃率（低）
 页面打开时间（短）
 存储空间占用（小）
 安装包体积（小）
-内存占用（小）   QA（测试） 测试功能    OP（运营）  日活    </description>
+内存占用（小）   FE（前端开发）     SRD（服务端开发）     QA（测试） 测试功能    OP（运营）  日活    </description>
     </item>
     
     <item>
@@ -90,7 +111,10 @@ paths：对应域名中的路径，用于过滤可以跳转到App的特定链接
       <pubDate>Wed, 22 May 2019 20:11:49 +0800</pubDate>
       
       <guid>https://shanbozhu.github.io/post/test/</guid>
-      <description></description>
+      <description>start=&amp;gt;start: 开始 input=&amp;gt;inputoutput: 输入 operation=&amp;gt;operation: 操作 condition=&amp;gt;condition: 操作出错？ output=&amp;gt;inputoutput: 输出 error=&amp;gt;operation: 请重新输入 end=&amp;gt;end: 结束
+start-&amp;gt;input input-&amp;gt;operation operation-&amp;gt;condition condition(no,bottom)-&amp;gt;output condition(yes)-&amp;gt;error(top)-&amp;gt;input output-&amp;gt;end
+title : 这个是标题 Alice -&amp;gt; Bob: Hello,how are you? Note right of Bob:Bob thinks Bob &amp;ndash;&amp;gt; Alice: Thinks
+Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp;gt;&amp;gt;D: Open arrow D--&amp;gt;&amp;gt;A: Dashed open arrow  { &amp;quot;type&amp;quot;: &amp;quot;radar&amp;quot;, &amp;quot;data&amp;quot;: { &amp;quot;labels&amp;quot;: [ &amp;quot;Eating&amp;quot;, &amp;quot;Drinking&amp;quot;, &amp;quot;Sleeping&amp;quot;, &amp;quot;Designing&amp;quot;, &amp;quot;Coding&amp;quot;, &amp;quot;Cycling&amp;quot;, &amp;quot;Running&amp;quot; ], &amp;quot;datasets&amp;quot;: [ { &amp;quot;label&amp;quot;: &amp;quot;My First dataset&amp;quot;, &amp;quot;backgroundColor&amp;quot;: &amp;quot;rgba(179,181,198,0.</description>
     </item>
     
     <item>
