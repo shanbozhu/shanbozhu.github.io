@@ -145,7 +145,7 @@ Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp
       
       <guid>https://shanbozhu.github.io/post/ios%E5%B8%B8%E7%94%A8%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</guid>
       <description>iOS常用开发工具如下：
- 开发环境：Xcode Git工具：Sourcetree 抓包工具：Charles 接口请求工具：Postman 数据库工具：DB Browser for SQLite Host切换工具：SwitchHosts! markdown编辑器：MacDown  </description>
+ 开发环境：Xcode Git工具：Sourcetree 抓包工具：Charles 接口请求工具：Postman 数据库工具：DB Browser for SQLite Host切换工具：SwitchHosts! markdown编辑器：MacDown http服务器：apache  </description>
     </item>
     
     <item>
