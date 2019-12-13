@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Blog</title>
+  <title>Shell常用命令 &middot; Blog</title>
 
   
   <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/print.css" media="print">
@@ -23,7 +23,6 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://shanbozhu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Blog" />
   
 </head>
 
@@ -49,16 +48,78 @@
 </aside>
 
     <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://shanbozhu.github.io/post/">Posts</a>
-  </h1>
-  <time datetime="2019-12-13T16:20:07&#43;0800" class="post-date">Fri, Dec 13, 2019</time>
+    <div class="post">
+  <h1>Shell常用命令</h1>
+  <time datetime=2019-12-13T16:20:07&#43;0800 class="post-date">Fri, Dec 13, 2019</time>
   
-  
-</article>
+
+<h4 id="shell常用命令">shell常用命令：</h4>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th align="right">操作</th>
+<th align="right">举例</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cp -a</td>
+<td align="right">复制</td>
+<td align="right"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>rm -r</td>
+<td align="right">删除</td>
+<td align="right"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>mv</td>
+<td align="right">移动、重命名</td>
+<td align="right"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>find</td>
+<td align="right">查找文件名</td>
+<td align="right"><code>find . -name abc</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>grep</td>
+<td align="right">文件内查找</td>
+<td align="right"><code>grep -rin abc .</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>sed</td>
+<td align="right">替换</td>
+<td align="right"><code>sed -i &quot;&quot; &quot;s/abc/def/g&quot; `grep -rl abc .`</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>scp -r</td>
+<td align="right">超级拷贝</td>
+<td align="right"><code>scp -r bobo@172.18.22.111:~/Desktop/abc ./</code><br><code>scp -r ./ bobo@172.18.22.111:~/Desktop/abc</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 </div>
+
+
     </main>
 
     
