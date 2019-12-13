@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Universal Links功能的实现 &middot; Blog</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://shanbozhu.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://shanbozhu.github.io/"><h1>Blog</h1></a>
+      <p class="lead">
+         
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://shanbozhu.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2019</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Universal Links功能的实现</h1>
+  <time datetime=2019-07-09T15:21:53&#43;0800 class="post-date">Tue, Jul 9, 2019</time>
+  
+
+<h4 id="一-universal-links是干什么的">一. Universal Links是干什么的</h4>
+
+<p>通用链接是Apple在iOS 9引入的一个新功能，是通过传统HTTP链接来启动App的技术。可以使用相同的网址打开网站和App。通过唯一的网址，就可以链接到App中具体的页面，如果用户没有安装App则链接到对应的普通网页。</p>
+
+<h4 id="二-universal-links怎么实现">二. Universal Links怎么实现</h4>
+
+<p>主要有如下三步:</p>
+
+<p><strong>1. 苹果开发者中心配置</strong></p>
+
+<p>登录开发者账号，在<code>Identifiers -&gt; AppIDs</code>找到自己的App ID，打开Associated Domains服务。</p>
+
+<p><img src="https://github.com/shanbozhu/shanbozhu.github.io.resource/blob/master/image/2019_7_9/2019_7_9_0.png?raw=true" alt="" /></p>
+
+<p><strong>2. 服务端配置</strong></p>
+
+<p>1). 新建名为<code>apple-app-site-association</code>的json文件，不能加<code>.json</code>后缀。</p>
+
+<p>2). 编辑该文件，内容格式如下，注意不能更改其格式和字段名称。</p>
+
+<pre><code>{
+    &quot;applinks&quot;:
+    {
+        &quot;apps&quot;: [],
+        &quot;details&quot;: [
+            {
+                &quot;appID&quot;: &quot;FFJNMLHK32.cn.damai.iphone&quot;,
+                &quot;paths&quot;: [&quot;*&quot;]
+            }
+        ]
+    }
+}
+</code></pre>
+
+<p>appID：由前缀和ID两部分组成，可以在开发者中心中的<code>Identifiers -&gt; AppIDs</code>中点击对应的App ID查看</p>
+
+<p><img src="https://github.com/shanbozhu/shanbozhu.github.io.resource/blob/master/image/2019_7_9/2019_7_9_1.png?raw=true" alt="" /></p>
+
+<p>paths：对应域名中的路径，用于过滤可以跳转到App的特定链接</p>
+
+<p>3). 把配置好的<code>apple-app-site-association</code>文件上传到服务器该域名的根目录下。</p>
+
+<p>4). 点击<a href="https://damai.cn/apple-app-site-association">https://damai.cn/apple-app-site-association</a>验证<code>apple-app-site-association</code>文件是否上传成功</p>
+
+<p><strong>3. xcode配置</strong></p>
+
+<p>1). 要用Apple Developer Program members的账号登陆Xcode，个人账号或未登录则看不到Associated Domains选项</p>
+
+<p>2). 找到工程的<code>Capabilities -&gt; Associated Domains</code>，打开此功能，在Domains中添加支持跳转的域名，域名的格式为<code>applinks:www.damai.cn</code></p>
+
+<p><img src="https://github.com/shanbozhu/shanbozhu.github.io.resource/blob/master/image/2019_7_9/2019_7_9_2.png?raw=true" alt="" /></p>
+
+<p>3). 在AppDelegate中实现方法，在该方法内可以实现跳转到具体页面的操作</p>
+
+<pre><code>- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+    NSURL *url = userActivity.webpageURL;
+    NSLog(@&quot;url.absoluteString = %@&quot;, url.absoluteString);
+
+    return YES;
+}
+</code></pre>
+
+<p>4). 所有操作均已完成</p>
+
+<p>短信或备忘录内点击形如<a href="https://damai.cn/xxx/xxx/xxx">https://damai.cn/xxx/xxx/xxx</a>的链接可以直接唤起app</p>
+
+<h4 id="三-universal-links注意事项">三. Universal Links注意事项</h4>
+
+<ol>
+<li><p>域名需要SSL证书，也就是需要支持https协议</p></li>
+
+<li><p>对json文件的请求仅在App第一次启动时请求一次，以后除非App更新或重新安装，否则不会在每次打开App时请求<code>apple-app-site-association</code>。如果第一次请求时网络连接出了问题, apple会缓存请求，等待有网的时候再去请求</p></li>
+
+<li><p>从iOS 9.2开始，在相同的domain内Universal Links是不工作的，必须要跨域才生效</p></li>
+</ol>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
