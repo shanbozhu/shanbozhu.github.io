@@ -116,7 +116,7 @@
 </tr>
 
 <tr>
-<td>grep</td>
+<td>grep -rin</td>
 <td align="right">文件内查找</td>
 <td align="right"><code>grep -rin abc .</code></td>
 <td></td>
@@ -216,6 +216,13 @@
 <tr>
 <td>shutdown</td>
 <td align="right">关机</td>
+<td align="right"><code>shutdown -h now</code><br><code>shutdown -h 20:25</code><br><code>shutdown -h +10</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>halt -p</td>
+<td align="right">关机</td>
 <td align="right"></td>
 <td></td>
 </tr>
@@ -264,8 +271,8 @@
 
 <tr>
 <td>&gt;</td>
-<td align="right">输出到文件（覆盖）</td>
-<td align="right"><code>ls &gt; test.log</code></td>
+<td align="right">重定向到文件（覆盖）</td>
+<td align="right"><code>ls &gt; test.log</code><br><code>ls 1&gt; test.log</code></td>
 <td></td>
 </tr>
 
@@ -301,6 +308,41 @@
 <td>mount</td>
 <td align="right">挂载设备</td>
 <td align="right"><code>mount /dev/cdrom /mnt/cdrom</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>echo</td>
+<td align="right">输出</td>
+<td align="right"><code>echo &quot;hello world&quot;</code><br><code>echo -n &quot;hello world&quot;</code><br><code>echo -e &quot;hello \nworld&quot;</code></td>
+<td>-n不换行，-e识别转义字符</td>
+</tr>
+
+<tr>
+<td>|</td>
+<td align="right">管道</td>
+<td align="right">`ls</td>
+<td>grep abc`</td>
+</tr>
+
+<tr>
+<td>date +%s</td>
+<td align="right">unix时间戳</td>
+<td align="right"></td>
+<td></td>
+</tr>
+
+<tr>
+<td>alias</td>
+<td align="right">别名</td>
+<td align="right"><code>alias dl='trash -F'</code></td>
+<td></td>
+</tr>
+
+<tr>
+<td>tree -aN</td>
+<td align="right">目录结构</td>
+<td align="right"></td>
 <td></td>
 </tr>
 </tbody>
